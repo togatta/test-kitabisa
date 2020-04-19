@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script type="text/javascript">
+     function handleChange(text) {
+        const url = new URL(window.location.href);
+        const searchParam = new URLSearchParams();
+        if(text.length > 0) {
+            // searchParam.append("search", text)
+            
+            // console.log(searchParam.toString())
+            // url.search = searchParam.toString()
+        } else {
+            url.search = ""
+        }
+
+        window.history.pushState({}, '', url.toString() + text)
+    }
+
+    function handleSubmit(e) {
+      window.location.href = '/' + document.getElementById("id").value
+    }
+</script>
+  </script>
+</head>
+
+<body>
+<div class="container">
+  <h2>Its time for trivia</h2>
+  <form onsubmit="event.preventDefault(); handleSubmit()">
+    <div class="form-group">
+      <label for="id">Masukkan tanggal hari ini:</label>
+      <input class="form-control" id="id" placeholder="your trivia">
+    </div>
+    <button class="btn btn-default">Submit</button>
+  </form>
+  {% if id != 0 %}
+     <h2>{{name}}</h2>
+{% endif %}
+</div>
+
+
+</body>
+</html>

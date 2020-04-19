@@ -1,2 +1,1 @@
-# test-kitabisa
-Basic Technical Test
+# iseng iseng berhadiah jo, males nulis readmenya yaudah sila baca saja
