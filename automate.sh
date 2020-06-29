@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DOCKER_USER=togattafudo
-DOCKER_PASS=zaenalganteng
+DOCKER_USER=<userdockerhub>
+DOCKER_PASS=<passworddockerhub>
 tag=$(date '+%d%b%Y')
 backendtag=$(docker images | grep backend-numbersapi | awk {'print $3'})
 frontendtag=$(docker images | grep frontend-numbersapi | awk {'print $3'})
